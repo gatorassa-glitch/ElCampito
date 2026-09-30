@@ -63,7 +63,7 @@ body {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    background: #263a2b url("../imagenes/camperito-home.png") center 48% / cover no-repeat;
+    background: #263a2b url("../imagenes/Container.jpg") center 48% / cover no-repeat;
     color: #fff;
 }
 
@@ -105,20 +105,3 @@ body {
 }
 .historia p { margin-bottom: 1.6rem; color: #666; font-size: 1.35rem; font-weight: 400; line-height: 1.8; letter-spacing: .025em; }
 .historia p + p { margin-top: .8rem; margin-bottom: 2.2rem; }
-
-@media (max-width: 760px) {
-    .pagina { width: 100%; margin-top: 0; }
-    .encabezado { min-height: auto; padding: 1.6rem 2rem; align-items: flex-start; flex-direction: column; gap: 1.5rem; }
-    .marca img { width: 13.5rem; }
-    .navegacion { width: 100%; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-    .navegacion a { font-size: 1.3rem; }
-    .navegacion .boton-donar { min-width: 7rem; padding: .8rem 1.4rem; }
-    .portada { min-height: 38rem; padding: 4rem 2.4rem; background-position: 58% center; }
-    .portada h1 { max-width: 44rem; font-size: clamp(3.7rem, 10vw, 4.5rem); }
-    .historia { padding: 3rem 2.4rem; }
-    .historia h2 { font-size: 3.6rem; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
-}
