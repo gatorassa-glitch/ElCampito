@@ -1,0 +1,15 @@
+:root {
+    --color-verde: #14412C ;
+    --color-crema: #F6F1E8;
+    --color-verde-clarito: #E7F1E6;
+    --color-negro: #000000;
+    --color-verde-linea: #B9E0BE;
+    --color-verde-solido: #6A8F6F;
+    --color-naranja: #E07A5F;
+    --color-verde-lima: #E0E7A5;
+    --color-marron: #6B4F3A;
+    --familia-tipografica-titulos: "Playfair Display", serif;
+    --familia-tipografica-cuerpos: "Lato", sans-serif;
+    --gap-section: ;
+
+}

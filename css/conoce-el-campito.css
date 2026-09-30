@@ -1,0 +1,124 @@
+:root {
+    color-scheme: light;
+}
+
+body {
+    min-width: 320px;
+    background: #20211f;
+    color: #193425;
+    font-family: var(--familia-tipografica-cuerpos), sans-serif;
+    font-size: 1.6rem;
+}
+
+.pagina {
+    width: min(100% - 1.6rem, 144rem);
+    min-height: 100vh;
+    margin: 1.8rem auto 0;
+    background: #fff;
+}
+
+.encabezado {
+    min-height: 7.4rem;
+    padding: 0 clamp(2.4rem, 6.5vw, 7rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    background: var(--color-crema);
+}
+
+.marca { display: inline-flex; align-items: center; flex: 0 0 auto; }
+.marca img { display: block; width: 14.6rem; height: auto; }
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(2rem, 6vw, 7rem);
+}
+
+.navegacion a {
+    color: var(--color-verde);
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: color 160ms ease, background-color 160ms ease;
+}
+
+.navegacion a:hover, .navegacion a:focus-visible, .navegacion a.activo { color: #ed604c; }
+.navegacion .boton-donar {
+    min-width: 9.5rem;
+    padding: .9rem 2rem;
+    border-radius: 3rem;
+    background: var(--color-verde);
+    color: #fff;
+    text-align: center;
+}
+.navegacion .boton-donar:hover, .navegacion .boton-donar:focus-visible { background: #ed604c; color: #fff; }
+
+.portada {
+    min-height: 35.5rem;
+    display: flex;
+    align-items: center;
+    padding: 4rem clamp(3rem, 6.5vw, 7rem);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #263a2b url("../imagenes/camperito-home.png") center 48% / cover no-repeat;
+    color: #fff;
+}
+
+.portada::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgb(0 0 0 / 58%) 0%, rgb(0 0 0 / 33%) 48%, rgb(0 0 0 / 12%) 100%), rgb(0 0 0 / 12%);
+}
+
+.portada__contenido { max-width: 51rem; padding-top: 1rem; }
+.sobretitulo { margin-bottom: .7rem; font-size: 1.1rem; font-weight: 900; letter-spacing: .19em; text-transform: uppercase; }
+.portada h1 {
+    max-width: 50rem;
+    margin-bottom: .3rem;
+    font-family: var(--familia-tipografica-titulos), Georgia, serif;
+    font-size: clamp(3.8rem, 4vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: -.035em;
+}
+.portada__bajada { font-size: 1.35rem; font-weight: 300; }
+
+.historia {
+    min-height: 37.4rem;
+    padding: 3.3rem clamp(3rem, 6.5vw, 7rem) 3.6rem;
+    background: #fff;
+}
+
+.historia__contenido { max-width: 112rem; margin: 0 auto; }
+.historia h2 {
+    margin-bottom: 1.5rem;
+    color: #183625;
+    font-family: var(--familia-tipografica-titulos), Georgia, serif;
+    font-size: clamp(3.6rem, 4vw, 4.2rem);
+    font-weight: 600;
+    line-height: 1.2;
+}
+.historia p { margin-bottom: 1.6rem; color: #666; font-size: 1.35rem; font-weight: 400; line-height: 1.8; letter-spacing: .025em; }
+.historia p + p { margin-top: .8rem; margin-bottom: 2.2rem; }
+
+@media (max-width: 760px) {
+    .pagina { width: 100%; margin-top: 0; }
+    .encabezado { min-height: auto; padding: 1.6rem 2rem; align-items: flex-start; flex-direction: column; gap: 1.5rem; }
+    .marca img { width: 13.5rem; }
+    .navegacion { width: 100%; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .navegacion a { font-size: 1.3rem; }
+    .navegacion .boton-donar { min-width: 7rem; padding: .8rem 1.4rem; }
+    .portada { min-height: 38rem; padding: 4rem 2.4rem; background-position: 58% center; }
+    .portada h1 { max-width: 44rem; font-size: clamp(3.7rem, 10vw, 4.5rem); }
+    .historia { padding: 3rem 2.4rem; }
+    .historia h2 { font-size: 3.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
