@@ -10,13 +10,6 @@ body {
     font-size: 1.6rem;
 }
 
-.pagina {
-    width: min(100% - 1.6rem, 144rem);
-    min-height: 100vh;
-    margin: 1.8rem auto 0;
-    background: #fff;
-}
-
 .encabezado {
     min-height: 7.4rem;
     padding: 0 clamp(2.4rem, 6.5vw, 7rem);
@@ -41,7 +34,6 @@ body {
     color: var(--color-verde);
     font-size: 1.4rem;
     font-weight: 700;
-    transition: color 160ms ease, background-color 160ms ease;
 }
 
 .navegacion a:hover, .navegacion a:focus-visible, .navegacion a.activo { color: #ed604c; }
@@ -54,54 +46,3 @@ body {
     text-align: center;
 }
 .navegacion .boton-donar:hover, .navegacion .boton-donar:focus-visible { background: #ed604c; color: #fff; }
-
-.portada {
-    min-height: 35.5rem;
-    display: flex;
-    align-items: center;
-    padding: 4rem clamp(3rem, 6.5vw, 7rem);
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    background: #263a2b url("../imagenes/Container.jpg") center 48% / cover no-repeat;
-    color: #fff;
-}
-
-.portada::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(90deg, rgb(0 0 0 / 58%) 0%, rgb(0 0 0 / 33%) 48%, rgb(0 0 0 / 12%) 100%), rgb(0 0 0 / 12%);
-}
-
-.portada__contenido { max-width: 51rem; padding-top: 1rem; }
-.sobretitulo { margin-bottom: .7rem; font-size: 1.1rem; font-weight: 900; letter-spacing: .19em; text-transform: uppercase; }
-.portada h1 {
-    max-width: 50rem;
-    margin-bottom: .3rem;
-    font-family: var(--familia-tipografica-titulos), Georgia, serif;
-    font-size: clamp(3.8rem, 4vw, 4.5rem);
-    font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: -.035em;
-}
-.portada__bajada { font-size: 1.35rem; font-weight: 300; }
-
-.historia {
-    min-height: 37.4rem;
-    padding: 3.3rem clamp(3rem, 6.5vw, 7rem) 3.6rem;
-    background: #fff;
-}
-
-.historia__contenido { max-width: 112rem; margin: 0 auto; }
-.historia h2 {
-    margin-bottom: 1.5rem;
-    color: #183625;
-    font-family: var(--familia-tipografica-titulos), Georgia, serif;
-    font-size: clamp(3.6rem, 4vw, 4.2rem);
-    font-weight: 600;
-    line-height: 1.2;
-}
-.historia p { margin-bottom: 1.6rem; color: #666; font-size: 1.35rem; font-weight: 400; line-height: 1.8; letter-spacing: .025em; }
-.historia p + p { margin-top: .8rem; margin-bottom: 2.2rem; }
