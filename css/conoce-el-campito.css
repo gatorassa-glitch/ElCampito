@@ -46,3 +46,64 @@ body {
     text-align: center;
 }
 .navegacion .boton-donar:hover, .navegacion .boton-donar:focus-visible { background: #ed604c; color: #fff; }
+
+.hero-historia {
+    min-height: calc(100svh - 7.4rem);
+    padding: clamp(7rem, 12vh, 11rem) clamp(2.4rem, 6.5vw, 7rem) 2.6rem;
+    background: linear-gradient(90deg, rgb(0 0 0 / 50%), rgb(0 0 0 / 16%)) center / 100% 100% no-repeat, url("../imagenes/Refugio rústico entre árboles y perros.png") right center / cover no-repeat;
+    background-color: #34481d;
+    color: #fff;
+}
+
+.hero-historia__contenido {
+    max-width: 42rem;
+}
+
+.hero-historia__etiqueta {
+    margin-bottom: .5rem;
+    font-size: .8rem;
+    font-weight: 900;
+    letter-spacing: .14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.hero-historia h1 {
+    max-width: 40rem;
+    font-family: var(--familia-tipografica-titulos), serif;
+    font-size: clamp(3.2rem, 4vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1.28;
+}
+
+.hero-historia__bajada {
+    margin-top: .2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+@media (max-width: 680px) {
+    .encabezado {
+        min-height: 6.8rem;
+        padding-inline: 2rem;
+        gap: 1.6rem;
+    }
+
+    .marca img { width: 11rem; }
+
+    .navegacion {
+        flex-wrap: wrap;
+        gap: .8rem 1.2rem;
+    }
+
+    .navegacion a { font-size: 1.2rem; }
+    .navegacion .boton-donar { min-width: 0; padding: .7rem 1.2rem; }
+
+    .hero-historia {
+        min-height: calc(100svh - 6.8rem);
+        padding: 6rem 2rem 3rem;
+    }
+
+    .hero-historia h1 { max-width: 34rem; }
+}
